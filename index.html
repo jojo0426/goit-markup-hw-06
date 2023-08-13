@@ -577,8 +577,29 @@
             </ul>
           </div>
         </div>
+        <div class="footer-container footer-form">
+          <form name="subscribe_form" autocomplete="on" method="">
+            <label class="footer-form-label"
+              >Subscribe
+              <input
+                type="email"
+                name="email"
+                placeholder="E-Mail"
+                class="footer-form-input"
+                required
+              />
+            </label>
+            <button type="submit" class="subscribe-button">
+              Subscribe
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#subscribe-icon"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
     <!-- modal section -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -587,8 +608,61 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <p class="order-service-header">
+          Leave your contacts and we will call you back
+        </p>
+        <form name="signup_form" autocomplete="on" method="" class="order-service-container list">
+
+          <label class="form-label">
+            <span class="form-label-text">Name </span>
+            <input type="text" class="form-input" name="full_name" required />
+            <svg class="form-input-icon">
+              <use href="./images/icons.svg#person"></use>
+            </svg>
+          </label>
+
+          <label class="form-label">
+            <span class="form-label-text">Phone</span>
+            <input type="tel" class="form-input" name="phone_number" required />
+            <svg class="form-input-icon">
+              <use href="./images/icons.svg#phone"></use>
+            </svg>
+          </label>
+
+          <label class="form-label">
+            <span class="form-label-text">Email</span>
+            <input type="email" class="form-input" name="email_add" required />
+            <svg class="form-input-icon">
+              <use href="./images/icons.svg#email"></use>
+            </svg>
+          </label>
+
+          
+            <label class="order-service-textarea">
+            Comment
+            <textarea name="comment" class="form-textarea" placeholder="Text input" required></textarea>
+          </label>
+
+          <label class="order-form-checkbox">
+            <input
+              type="checkbox"
+              value="agree" name="agreement"
+              class="order-policy-checkbox"
+            />
+            </label>
+            <p class="order-policy-text">
+              I accept the terms and conditions of the
+              <a href="">Privacy Policy</a>
+            </p>
+          </label>
+          <div class="form-button-container">
+            <button type="submit" class="form-button">Send</button>
+          </div>
+        </form>
       </div>
     </div>
+
     <!-- modal script -->
     <script src="./js/modal.js"></script>
   </body>

@@ -305,7 +305,7 @@
             </p>
           </div>
 
-          <!-- footer icon-->
+          <!-- footer 2 -->
           <div class="footer-block">
             <b class="footer-heading">Social media</b>
             <ul class="social-footer list">
@@ -364,7 +364,39 @@
             </ul>
           </div>
         </div>
+        <div class="footer-container footer-form">
+          <form name="subscribe_form" autocomplete="on" method="">
+            <label class="footer-form-label"
+              >Subscribe
+              <input
+                type="email"
+                name="email"
+                placeholder="E-Mail"
+                class="footer-form-input"
+                required
+              />
+            </label>
+            <button type="submit" class="subscribe-button">
+              Subscribe
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#subscribe-icon"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    <!-- modal section -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- modal script -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
