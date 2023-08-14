@@ -329,6 +329,7 @@ body {
 .form-input {
   display: block;
   width: 360px;
+  outline: none;
   height: 40px;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -358,6 +359,7 @@ body {
 .form-textarea {
   width: 360px;
   height: 120px;
+  outline: none;
   flex-shrink: 0;
   padding-top: 8px;
   padding-left: 16px;
@@ -436,6 +438,10 @@ body {
   margin-top: -40px;
   margin-left: 20px;
   margin-bottom: 24px;
+}
+
+.order-policy-checkbox {
+  appearance: none;
 }
 
 /* send button for modal */
