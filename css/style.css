@@ -402,6 +402,11 @@ body {
   color: var(--light-slate);
 }
 
+.form-label-text {
+  position: absolute;
+  top: -20px;
+}
+
 .form-label-textarea {
   position: relative;
   margin-bottom: 16px;
@@ -409,11 +414,6 @@ body {
   line-height: 1.166;
   letter-spacing: 0.01em;
   color: var(--light-slate);
-}
-
-.form-label-text {
-  position: absolute;
-  top: -20px;
 }
 
 .order-form-checkbox {
@@ -424,24 +424,73 @@ body {
   height: 16px;
   gap: 8px;
   margin-bottom: 24px;
-  margin-top: 16px;
+  margin-top: 7px;
 }
 
-.order-policy-text {
-  display: flex;
+.form-checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.form-checkbox:checked + .order-policy-checkbox {
+  background-color: var(--ocean);
+  border-color: var(--ocean);
+  fill: var(--white);
+  font: var(--white);
+}
+
+.order-policy-checkbox {
+  display: inline-block;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  border-color: var(--lightslate);
+  fill: none;
+  transition: border-color 250ms ease-in-out, background-color 250ms ease-in-out,
+    fill 250ms ease-in-out;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-policy-checkbox:hover,
+.order-policy-checkbox:focus {
+  border: 1px solid var(--iris-color);
+}
+
+.checkbox-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+}
+
+.form-policy-text {
   flex-shrink: 0;
   color: var(--light-slate);
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0.48px;
-  margin-top: -40px;
-  margin-left: 20px;
-  margin-bottom: 24px;
 }
 
-.order-policy-checkbox {
-  appearance: none;
+.order-privacy-link {
+  color: var(--iris-color);
+  text-decoration-color: var(--iris-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+}
+
+.order-privacy-link:hover,
+.order-privacy-link:focus {
+  text-decoration: none;
+  transition-property: color, text-decoration-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* send button for modal */
@@ -451,6 +500,7 @@ body {
   justify-content: center;
   width: 100%;
 }
+
 .form-button {
   width: 169px;
   height: 56px;
@@ -782,6 +832,7 @@ body {
   flex-shrink: 0;
   gap: 16px;
   border-radius: 4px;
+  outline: none;
   color: var(--white);
   background-color: var(--navy-blue-color);
   border: 1px solid var(--white);
@@ -922,6 +973,7 @@ body {
   font-size: 16px;
   color: var(--cloud);
   background-color: var(--iris-color);
+  opacity: 0.9;
   transform: translateY(101%);
   transition: transform 250ms ease-in-out;
   font-weight: 400;
